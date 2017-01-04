@@ -1,0 +1,78 @@
+<ion-view view-title="{{navTitle}}">
+  <ion-content delegate-handle="agendaScrollDelegate">
+    <div ng-hide="userdata.ca" style="text-align: center; margin-top: 30px; padding: 20px">
+      <p style="color: darkgray"> Hãy tìm kiếm và thêm lịch học bạn đã đăng ký. Nếu bạn đang học theo lớp hành chính thì
+        hãy tìm kiếm theo cú pháp ví dụ sau: 53-Kinh tế-Khối 3</p>
+      <button ui-sref="tab.fotos" class="button button-block button-positive">
+        Thêm lịch học
+      </button>
+    </div>
+    <div class="list">
+      <div ng-if="datathu2.length > 0" class="item item-divider" ion-affix><i class="icon ion-calendar"></i> Thứ 2</div>
+      <div ng-repeat="tiet in datathu2 | orderBy: 'ca'" class="item item-avatar">
+        <img src="img/ca{{tiet.ca}}.png">
+        <h2>{{tiet.tenhocphan}}</h2>
+        <p>{{tiet.maloptinchi}}</p>
+      </div>
+    </div>
+
+    <div class="list">
+      <div ng-if="datathu3.length > 0" class="item item-divider" ion-affix><i class="icon ion-calendar"></i> Thứ 3</div>
+      <div ng-repeat="tiet in datathu3 | orderBy: 'ca'" class="item item-avatar">
+        <img src="img/ca{{tiet.ca}}.png">
+        <h2>{{tiet.tenhocphan}}</h2>
+        <p>{{tiet.maloptinchi}}</p>
+      </div>
+    </div>
+
+    <div class="list">
+      <div ng-if="datathu4.length > 0" class="item item-divider" ion-affix><i class="icon ion-calendar"></i> Thứ 4</div>
+      <div ng-repeat="tiet in datathu4 | orderBy: 'ca'" class="item item-avatar">
+        <img src="img/ca{{tiet.ca}}.png">
+        <h2>{{tiet.tenhocphan}}</h2>
+        <p>{{tiet.maloptinchi}}</p>
+      </div>
+    </div>
+
+    <div class="list">
+      <div ng-if="datathu5.length > 0" class="item item-divider" ion-affix><i class="icon ion-calendar"></i> Thứ 5</div>
+      <div ng-repeat="tiet in datathu5 | orderBy: 'ca'" class="item item-avatar">
+        <img src="img/ca{{tiet.ca}}.png">
+
+        <h2>{{tiet.tenhocphan}}</h2>
+        <p>{{tiet.maloptinchi}}</p>
+      </div>
+    </div>
+
+    <div class="list">
+      <div ng-if="datathu6.length > 0" class="item item-divider" ion-affix><i class="icon ion-calendar"></i> Thứ 6</div>
+      <div ng-repeat="tiet in datathu6 | orderBy: 'ca'" class="item item-avatar">
+        <img src="img/ca{{tiet.ca}}.png">
+        <h2>{{tiet.tenhocphan}}</h2>
+        <p>{{tiet.maloptinchi}}</p>
+      </div>
+    </div>
+
+    <div class="list">
+      <div ng-if="datathu7.length > 0" class="item item-divider" ion-affix><i class="icon ion-calendar"></i> Thứ 7</div>
+      <div ng-repeat="tiet in datathu7 | orderBy: 'ca'" class="item item-avatar">
+        <img src="img/ca{{tiet.ca}}.png">
+        <h2>{{tiet.tenhocphan}}</h2>
+        <p>{{tiet.maloptinchi}}</p>
+      </div>
+    </div>
+
+
+    <div class="list">
+      <div ng-if="datathu8.length > 0" class="item item-divider" ion-affix><i class="icon ion-calendar"></i> Chủ nhật
+      </div>
+      <div ng-repeat="tiet in datathu8 | orderBy: 'ca'" class="item item-avatar">
+        <img src="img/ca{{tiet.ca}}.png">
+        <h2>{{tiet.tenhocphan}}</h2>
+        <p>{{tiet.maloptinchi}}</p>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

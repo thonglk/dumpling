@@ -1,0 +1,19 @@
+<ion-view view-title="Kết quả đăng ký">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate" ng-repeat="tinchi in userdata.ca"
+                type="item-text-wrap" ng-if="tinchi.stt">
+        <h2>{{tinchi.tenhocphan}}</h2>
+        <p
+          style="font-size: 0.69em; background: #666;color: #fff;padding: 0px 6px;display: inline-block;border-radius: 3px;">
+          {{tinchi.maloptinchi}}</p>
+        <p>Thứ {{tinchi.thu}} - Ca {{tinchi.ca}}</p>
+
+        <ion-option-button class="button-energized" ng-click="removeca(tinchi.stt)"><i
+          class="icon ion-close-circled"></i>
+        </ion-option-button>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

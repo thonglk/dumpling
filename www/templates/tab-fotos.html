@@ -1,0 +1,29 @@
+<ion-view view-title="Thêm lịch học ">
+
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon icon ion-ios-search-strong" ng-click="showFilterBar()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="tinchi in data | limitTo:limit"
+                type="item-text-wrap">
+        <h2>{{tinchi.tenhocphan}}</h2>
+        <p
+          style="font-size: 0.69em; background: #666;color: #fff;padding: 0px 6px;display: inline-block;border-radius: 3px;">
+          {{tinchi.maloptinchi}}</p>
+        <p>{{tinchi.lophanhchinh}}</p>
+        <p>{{tinchi.lichhoc}}</p>
+
+        <i class="icon ion-plus-round " ng-click="favorito(tinchi)"></i>
+
+        <ion-option-button class="button-energized" ng-click="favorito(local)"><i class="icon ion-heart"></i>
+        </ion-option-button>
+      </ion-item>
+      <ion-infinite-scroll
+        on-infinite="doRefresh()"
+        distance="1%">
+      </ion-infinite-scroll>
+
+    </ion-list>
+  </ion-content>
+</ion-view>
